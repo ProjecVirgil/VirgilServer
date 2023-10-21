@@ -23,14 +23,17 @@ fastapi = "^0.68.0"
 uvicorn = "^0.15.0"
 colorama = "^0.4.6"
 pyfiglet = "^1.0.2"
-#requests = "^2.31.0"
-#tomli = "^2.0.1"
-#tomlkit = "^0.12.1"
+requests = "^2.31.0"
+tomli = "^2.0.1"
+tomlkit = "^0.12.1"
+aiohttp = "^3.8.6"
+
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
 ruff = "^0.0.292"
 coverage = "^7.3.2"
+
 
 
 # ------ CONFIG OF RUFF  --------
