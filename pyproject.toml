@@ -1,0 +1,52 @@
+# ---- STANDARD CONFIG ----
+[project]
+name = "VirgilAI"
+description = "Virgil is an advanced virtual assistant that is based on the powerful GPT-3.5 artificial intelligence developed by OpenAI. This virtual assistant is designed to offer a wide range of features and capabilities similar to those of well-known virtual assistants such as Amazon's Alexa."
+version = "v2.2.0"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.license]
+file = "LICENSE"
+
+
+# ------ CONFIG FOR POETRY ------
+[tool.poetry]
+name = "Virgil-server"
+version = "1.0.0"
+description = "Un esempio di API REST con FastAPI."
+authors = ["Tuo Nome <Retr0.projectvirgilai@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.68.0"
+uvicorn = "^0.15.0"
+colorama = "^0.4.6"
+pyfiglet = "^1.0.2"
+#requests = "^2.31.0"
+#tomli = "^2.0.1"
+#tomlkit = "^0.12.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+ruff = "^0.0.292"
+coverage = "^7.3.2"
+
+
+# ------ CONFIG OF RUFF  --------
+[tool.ruff]
+ignore = ["E501"]
+extend-include = ["*.pyw"]
+select = ["E","F","N","D","UP","PYI","SLOT","SIM","TD","FIX","W","PL"]
+exclude = [
+    ".git",
+    ".git-rewrite",
+    ".venv",
+    "__pypackages__",
+    "venv",
+]
+respect-gitignore = true
+target-version = "py311"
+
+[tool.ruff.pydocstyle]
+convention = "google"
