@@ -6,7 +6,6 @@ Returns:
 import aiohttp
 from fastapi import FastAPI
 import requests
-import uvicorn
 
 app = FastAPI()
 
@@ -66,5 +65,4 @@ async def asynchronous_endpoint():
         return {"message": "Asynchronous endpoint!", "status": response.status}
 
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=1010)
+#poetry run uvicorn server:app --reload --host 127.0.0.1 --port 8080
