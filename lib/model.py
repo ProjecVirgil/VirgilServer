@@ -1,9 +1,14 @@
+"""File main for the use of models.
+
+Returns:
+    _type_: _description_
+"""
 import os
 import logging
 import sys
 
 import joblib
-from vectorizer import GloVeVectorizer,sentence_to_vec
+from vectorizer import GloVeVectorizer,sentence_to_vec  # noqa: F401
 
 
 class Model:

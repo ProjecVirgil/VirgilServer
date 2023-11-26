@@ -1,7 +1,8 @@
+"""Module for the manage of request."""
 import requests
 
 import logging
-import lib.logger
+import lib.logger  # noqa: F401
 
 def download_model_en():
     """Download model english."""

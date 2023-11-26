@@ -1,5 +1,14 @@
+"""The file main for the API.
+
+Raises:
+        Exception: _description_
+
+Returns:
+        _type_: _description_
+"""
+
 import os
-import logging
+import logging  # noqa: F401
 import string
 import time
 
@@ -10,8 +19,13 @@ from fastapi import FastAPI
 
 
 class Api:
+    """This class is the main entry point for all API related operations.
 
+    It provides methods to create, update and delete APIs in an environment.
+
+    """
     def __init__(self):
+        """Initializes a new instance of the `Api` class."""
         self.app = FastAPI()
         self.base_path = os.getcwd()
         self.path_input = os.path.join(self.base_path, "data","in")
@@ -51,13 +65,6 @@ def read_root():
     """
     return {"Message": "Server works"}
 
-'''
-        original_punctuation = string.punctuation
-        exceptions = ":'"
-        self.custom_punctuation = "".join([char for char in original_punctuation if char not in exceptions])
-
-
-'''
 @app.get("/q/{lang}/{message}")
 def predictions(lang:str,message:str):
     """Sanity check.

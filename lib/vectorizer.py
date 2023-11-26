@@ -33,8 +33,8 @@ class GloVeVectorizer(TransformerMixin):
         self.model = model
         self.size = model.vector_size
 
-    def fit(self, x, y=None):
+    def fit(self, x, y=None):  # noqa: D102
         return self
 
-    def transform(self, x):
+    def transform(self, x):  # noqa: D102
         return np.array([sentence_to_vec(sentence, self.model) for sentence in x])
