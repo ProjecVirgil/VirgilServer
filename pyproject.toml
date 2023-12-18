@@ -41,7 +41,7 @@ level_debug = "info" # (debug,info,warning,error,critical)
 logs_file = false
 
 [tool.poetry.dev-dependencies]
-ruff = "^0.0.292"
+ruff = "^0.1.8"
 coverage = "^7.3.2"
 pytest = "^7.4.3"
 
